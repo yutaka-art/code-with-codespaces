@@ -4,22 +4,22 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 3: Customize your codespace!
+## ステップ 3: Codespace をカスタマイズしよう！
 
-_Nice work! :tada: You created a codespace with a custom image!_
+_素晴らしい！ :tada: カスタムイメージで Codespace を作成できましたね！_
 
-You can customize your codespace by adding VS code extensions, adding features, setting host requirements, and much more.
+VS Code の拡張機能を追加したり、機能を追加したり、ホスト要件を設定したりすることで、Codespace をさらにカスタマイズできます。
 
-Let's customize some settings in the `devcontainer.json` file!
+`devcontainer.json` ファイルでいくつかの設定をカスタマイズしてみましょう！
 
-### :keyboard: Activity: Add customizations to the `devcontainer` file
+### :keyboard: アクティビティ: `devcontainer` ファイルにカスタマイズを追加しよう
 
-1. Navigate to the `.devcontainer/devcontainer.json` file.
-1. Add the following customizations to the body of the file before the last `}`.
+1. `.devcontainer/devcontainer.json` ファイルに移動します。
+1. ファイルの本体で最後の `}` の直前に、以下のカスタマイズを追加します。
 
    ```jsonc
     ,
-    // Add the IDs of extensions you want installed when the container is created.
+    // コンテナ作成時にインストールしたい拡張機能のIDを追加します
     "customizations": {
         "vscode": {
             "extensions": [
@@ -34,44 +34,44 @@ Let's customize some settings in the `devcontainer.json` file!
     }
    ```
 
-1. Click **Commit changes** and then select **Commit changes directly to the `main` branch**.
-1. Create a new codespace by navigating to the landing page of your repository.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Ensure the number of active codespaces does not reach the maximum (typically 2). For more information, see [understanding the codespace lifecycle](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle).
+1. **Commit changes** をクリックし、**Commit changes directly to the `main` branch** を選択します。
+1. リポジトリのトップページに移動し、新しい Codespace を作成します。
+1. ページ中央の **Code** ボタンをクリックします。
+1. ポップアップで **Codespaces** タブをクリックします。
+1. アクティブな Codespace の数が最大（通常は2）に達していないことを確認します。詳細は [Codespace のライフサイクルについて](https://docs.github.com/ja/codespaces/getting-started/understanding-the-codespace-lifecycle) を参照してください。
 
-   > **Tip**: To stop an active codespace, click the **•••** next to **<span>&#x25cf;</span>Active** and select **Stop codespace** from the menu.
+   > **ヒント**: アクティブな Codespace を停止するには、**<span>&#x25cf;</span>Active** の横の **•••** をクリックし、メニューから **Stop codespace** を選択します。
    
-1. Click the **Create codespace on main** button.
+1. **Create codespace on main** ボタンをクリックします。
 
-   > Wait about **2 minutes** for the codespace to spin itself up.
+   > Codespace の起動には約 **2分** かかります。
 
-1. Verify your codespace is running, as you did previously.
-1. The `codespace.md` file should show up in the VS Code editor.
-1. The `copilot` extension should show up in the VS Code extension list.
+1. 先ほどと同様に Codespace が起動していることを確認します。
+1. VS Code エディタに `codespace.md` ファイルが表示されているはずです。
+1. VS Code の拡張機能リストに `copilot` 拡張機能が表示されているはずです。
 
-   This will add a VS Code extension as well as open a file on start up of the codespace.
+   これにより、VS Code の拡張機能が追加され、Codespace 起動時にファイルが自動で開かれます。
 
-Next lets add some code to run upon creation of the codespace!
+次に、Codespace 作成時に自動でコードを実行する設定を追加しましょう！
 
-### :keyboard: Activity: Execute code upon creation of the codespace
+### :keyboard: アクティビティ: Codespace 作成時にコードを実行しよう
 
-1. Edit the `.devcontainer/devcontainer.json` file.
-1. Add the following postCreateCommand to the body of the file before the last `}`.
+1. `.devcontainer/devcontainer.json` ファイルを編集します。
+1. ファイルの本体で最後の `}` の直前に、以下の postCreateCommand を追加します。
 
    ```jsonc
     ,
     "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
    ```
 
-1. Click **Commit changes** and then select **Commit changes directly to the `main` branch**.
-1. Create a new codespace by navigating to the landing page of your repository.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
+1. **Commit changes** をクリックし、**Commit changes directly to the `main` branch** を選択します。
+1. リポジトリのトップページに移動し、新しい Codespace を作成します。
+1. ページ中央の **Code** ボタンをクリックします。
+1. ポップアップで **Codespaces** タブをクリックします。
+1. **Create codespace on main** ボタンをクリックします。
 
-   > Wait about **2 minutes** for the codespace to spin itself up.
+   > Codespace の起動には約 **2分** かかります。
 
-1. Verify your codespace is running, as you did previously.
-1. Verify the `codespace.md` file now has the text `Writing code upon codespace creation!`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. 先ほどと同様に Codespace が起動していることを確認します。
+1. `codespace.md` ファイルに `Writing code upon codespace creation!` というテキストが追加されていることを確認します。
+1. 約20秒待ってからこのページ（手順を見ているページ）をリロードしてください。[GitHub Actions](https://docs.github.com/ja/actions) により自動的に次のステップに進みます。

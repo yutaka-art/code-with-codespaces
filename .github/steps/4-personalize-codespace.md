@@ -4,41 +4,42 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 4: Personalize your codespace!
+## ステップ 4: Codespace をパーソナライズしよう！
 
-_Nicely done customizing your codespace!_ :partying_face:
+_Codespace のカスタマイズ、お疲れさまでした！_ :partying_face:
 
-When using any development environment, customizing the settings and tools to your preferences and workflows is an important step. GitHub Codespaces offers two main ways of personalizing your codespace: `Settings Sync` with VS Code and `dotfiles`.
+どんな開発環境でも、自分の好みやワークフローに合わせて設定やツールをカスタマイズすることは重要です。GitHub Codespaces では、Codespace をパーソナライズする主な方法が2つあります：VS Code の `Settings Sync` と `dotfiles` です。
 
-`Dotfiles` will be the focus of this activity.
+このアクティビティでは `dotfiles` に注目します。
 
-**What are `dotfiles`?** Dotfiles are files and folders on Unix-like systems starting with . that control the configuration of applications and shells on your system. You can store and manage your dotfiles in a repository on GitHub.
+**`dotfiles` とは？**  
+dotfiles とは、Unix系システムで「.」から始まるファイルやフォルダのことで、アプリケーションやシェルの設定を管理します。これらの dotfiles を GitHub のリポジトリで管理できます。
 
-Let's see how this works!
+実際にやってみましょう！
 
-### :keyboard: Activity: Enable a `dotfile` for your codespace
+### :keyboard: アクティビティ: Codespace で `dotfile` を有効にしよう
 
-1. Start from the landing page of your repository.
-1. In the upper-right corner of any page, click your profile photo, and then click **Settings**.
-1. In the **Code, planning, and automation** section of the sidebar, click **Codespaces**.
-1. Under **Dotfiles**, select **Automatically install dotfiles** so that GitHub Codespaces automatically installs your dotfiles into every new codespace you create.
-1. Click **Select repository** and then choose your current skills working repository as the repository from which to install dotfiles.
+1. リポジトリのトップページから始めます。
+1. 画面右上のプロフィール写真をクリックし、**Settings** をクリックします。
+1. サイドバーの **Code, planning, and automation** セクションで **Codespaces** をクリックします。
+1. **Dotfiles** の項目で **Automatically install dotfiles** を選択し、GitHub Codespaces が新しい Codespace 作成時に自動で dotfiles をインストールするようにします。
+1. **Select repository** をクリックし、現在作業中のリポジトリを dotfiles のリポジトリとして選択します。
 
-### :keyboard: Activity: Add a `dotfile` to your repository and run your codespace
+### :keyboard: アクティビティ: リポジトリに `dotfile` を追加して Codespace を実行しよう
 
-1. Start from the landing page of your repository.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
+1. リポジトリのトップページから始めます。
+1. ページ中央の **Code** ボタンをクリックします。
+1. ポップアップで **Codespaces** タブをクリックします。
+1. **Create codespace on main** ボタンをクリックします。
 
-   > Wait about **2 minutes** for the codespace to spin itself up.
+   > Codespace の起動には約 **2分** かかります。
 
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
+1. Codespace が起動していることを確認します。ブラウザには VS Code のウェブエディタとターミナルが表示されているはずです。
 
    ![codespace1](https://user-images.githubusercontent.com/26442605/207355196-71aab43f-35a9-495b-bcfe-bf3773c2f1b3.png)
 
-1. From inside the codespace in the VS Code explorer window, create a new file `setup.sh`.
-1. Enter the following code into the file:
+1. Codespace 内の VS Code エクスプローラーで新しいファイル `setup.sh` を作成します。
+1. ファイルに次のコードを入力します。
 
    ```bash
    #!/bin/bash
@@ -48,34 +49,34 @@ Let's see how this works!
    echo "export PATH=\$PATH:/usr/games" >> ~/.bashrc
    ```
 
-1. Save the file.
-   > **Note**: The file should autosave.
-1. Commit the file changes. From the VS Code terminal enter:
+1. ファイルを保存します。  
+   > **注**: ファイルは自動保存されるはずです。
+1. ファイルの変更をコミットします。VS Code のターミナルで次を入力：
 
    ```shell
    git add setup.sh --chmod=+x
    git commit -m "Adding setup.sh from the codespace!"
    ```
 
-1. Push the changes back to your repository. From the VS Code terminal, enter:
+1. 変更をリポジトリにプッシュします。VS Code のターミナルで次を入力：
 
    ```shell
    git push
    ```
 
-1. Switch back to the homepage of your repository and view the `setup.sh` to verify the new code was pushed to your repository.
-1. Close the codespace web browser tab.
-1. Click the **Create codespace on main** button.
+1. リポジトリのホームページに戻り、`setup.sh` が正しくプッシュされたことを確認します。
+1. Codespace のブラウザタブを閉じます。
+1. **Create codespace on main** ボタンをクリックします。
 
-   > Wait about **2 minutes** for the codespace to spin itself up.
+   > Codespace の起動には約 **2分** かかります。
 
-1. Verify your codespace is running, as you did previously.
-1. Verify the `setup.sh` file is present in your VS Code editor.
-1. From the VS Code terminal, type or paste:
+1. 先ほどと同様に Codespace が起動していることを確認します。
+1. VS Code エディタに `setup.sh` ファイルが存在することを確認します。
+1. VS Code のターミナルで次を入力または貼り付けます。
 
    ```shell
    sl
    ```
 
-1. Enjoy the show!
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. アニメーションを楽しみましょう！
+1. 約20秒待ってからこのページ（手順を見ているページ）をリロードしてください。[GitHub Actions](https://docs.github.com/ja/actions) により自動的に次のステップに進みます。
